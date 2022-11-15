@@ -1,0 +1,44 @@
+<footer class="footer pano-footer">
+  <div class="footer-inner">
+    <div class="footer-inner-left">
+      <span><i class="fa fa-copyright" aria-hidden="true"></i> Panoramik Games LTD, 2022. All rights reserved.</span><br>
+      <span class="footer-terms"><a href="https://panoramikgames.com/terms_of_use.html" target="_blank">Terms of Use</a> | <a href="https://panoramikgames.com/privacy_policy.html" target="_blank">Privacy Policy</a></span>
+    </div>
+    
+		<div class="footer-inner-right">
+      <div class="footer-language-selector">
+        {{#if alternative_locales}}
+          <div class="dropdown language-selector">
+            <button class="dropdown-toggle" aria-haspopup="true">
+              {{current_locale.name}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+              </svg>
+            </button>
+            <span class="dropdown-menu dropdown-menu-end" role="menu">
+              {{#each alternative_locales}}
+                <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                  {{name}}
+                </a>
+              {{/each}}
+            </span>
+          </div>
+        {{/if}}
+      </div>
+      <div class="footer-socials">
+        <a class="footer-icons icon-discord" href="https://discord.gg/autobrawlchess" target="_blank">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a class="footer-icons icon-facebook" href="https://www.facebook.com/autobrawlchess/" target="_blank">
+          <i class="fa fa-facebook-square"></i>
+        </a>
+        <a class="footer-icons icon-instagram" href="https://www.instagram.com/autobrawlchess/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="footer-icons icon-vk" href="https://vk.com/autobrawlchess" target="_blank">
+          <i class="fab fa-vk"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
