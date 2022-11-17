@@ -12,24 +12,28 @@
           "identifier": "alert_info",
           "label": "alert_info_label",
           "type": "checkbox",
+          "value": false,
           "description": "alert_info_description"
         },
         {
           "identifier": "alert_regular",
           "label": "alert_regular_label",
           "type": "checkbox",
+          "value": false,
           "description": "alert_regular_description"
         },
         {
           "identifier": "alert_maintenance",
           "label": "alert_maintenance_label",
           "type": "checkbox",
+          "value": false,
           "description": "alert_maintenance_description"
         },
         {
           "identifier": "alert_delays",
           "label": "alert_delays_label",
           "type": "checkbox",
+          "value": false,
           "description": "alert_delays_description"
         }
       ]
