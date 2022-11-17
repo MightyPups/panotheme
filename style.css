@@ -5740,7 +5740,7 @@ li {
   align-items: center;
 }
 
-.alert {
+.regular {
   background: #DD2F13;
 }
 
@@ -5842,7 +5842,7 @@ body > div.alertbox > div > div > p > a {
   content: "\f0f3";
 }
 
-.icon-alert:before {
+.icon-regular:before {
   content: "\f7d9";
 }
 
