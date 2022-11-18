@@ -1,3 +1,8 @@
+<div class="pano-top">
+  {{link 'new_request' class='submit-a-request pano-submit-button pano-top-button'}}
+</div>
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+
 {{!-- Alert bars --}}
 {{#if settings.alert_info}}
 <div class="ns-box info ns-bar ns-effect-slidetop ns-type-notice ns-show">
@@ -39,11 +44,6 @@
 </div>
 {{/if}}
 {{!-- Alert bars end --}}
-
-<div class="pano-top">
-  {{link 'new_request' class='submit-a-request pano-submit-button pano-top-button'}}
-</div>
-<h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
 <section id="main-content" class="section hero">
   <img src="{{asset 'logo-abc.svg'}}" />
