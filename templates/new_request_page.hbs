@@ -1,35 +1,78 @@
+{{!-- Alert bars --}}
+{{#if settings.alert_info}}
+<div class="ns-box info ns-bar ns-effect-slidetop ns-type-notice ns-show">
+    <div class="ns-box-inner">
+        <span class="box-icon icon-info"></span>
+        <p>{{dc 'hc_info_alert'}}</p>
+    </div>
+    <span class="ns-close"></span>
+</div>
+{{/if}}
+
+{{#if settings.alert_regular}}
+<div class="ns-box regular ns-bar ns-effect-slidetop ns-type-notice ns-show">
+    <div class="ns-box-inner">
+        <span class="box-icon icon-regular"></span>
+        <p>{{dc 'hc_regular_alert'}}</p>
+    </div>
+    <span class="ns-close"></span>
+</div>
+{{/if}}
+
+{{#if settings.alert_maintenance}}
+<div class="ns-box maintenance ns-bar ns-effect-slidetop ns-type-notice ns-show">
+    <div class="ns-box-inner">
+        <span class="box-icon icon-maintenance"></span>
+        <p>{{dc 'hc_maintenance_alert'}}</p>
+    </div>
+    <span class="ns-close"></span>
+</div>
+{{/if}}
+
+{{#if settings.alert_delays}}
+<div class="ns-box delays ns-bar ns-effect-slidetop ns-type-notice ns-show">
+    <div class="ns-box-inner">
+        <span class="box-icon icon-delays"></span>
+        <p>{{dc 'hc_delays_alert'}}</p>
+    </div>
+    <span class="ns-close"></span>
+</div>
+{{/if}}
+{{!-- Alert bars end --}}
+
 <div class="container-divider"></div>
 <div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-      </svg>
-      {{search submit=false}}
-    </div>
-  </nav>
-<div class="pano-request-page">
-  <h1>
-    {{t 'submit_a_request'}}
-    <span class="follow-up-hint">
-      {{follow_up}}
-    </span>
-  </h1>
+    <nav class="sub-nav">
+        {{breadcrumbs}}
+        <div class="search-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+                class="search-icon" aria-hidden="true">
+                <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
+                <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5" />
+            </svg>
+            {{search submit=false}}
+        </div>
+    </nav>
+    <div class="pano-request-page">
+        <h1>
+            {{t 'submit_a_request'}}
+            <span class="follow-up-hint">
+                {{follow_up}}
+            </span>
+        </h1>
 
-  <div id="main-content" class="form">
-    {{request_form wysiwyg=true}}
-  </div>
-  </div>
+        <div id="main-content" class="form">
+            {{request_form wysiwyg=true}}
+        </div>
+    </div>
 </div>
 
 
 
 <script type="text/javascript">
 
-  	 // Force FullScreen for touch devices for somewhat better experience 
-    
+    // Force FullScreen for touch devices for somewhat better experience 
+
     document.addEventListener("touchend", setFullScreenTrue);
 
     function setFullScreenTrue() {
@@ -46,7 +89,7 @@
         }
     }
 
-  
+
     // Fill in Field ID from your textarea
     var browserfield_id = "7433937113490";
     document.querySelector('.request_custom_fields_' + browserfield_id).hidden = true;  //User Agent
@@ -63,7 +106,7 @@
     (function (window) {
         {
             var unknown = '-';
-            
+
             // WebGL 2.0 Support
             var gotWebGL2Context;
             var isWebGl2Supported = "No";
@@ -78,8 +121,8 @@
             var screenSize = '';
             if (screen.width) {
                 let pixelRatio = window.devicePixelRatio;
-                width = (screen.width) ? screen.width*pixelRatio : '';
-                height = (screen.height) ? screen.height*pixelRatio : '';
+                width = (screen.width) ? screen.width * pixelRatio : '';
+                height = (screen.height) ? screen.height * pixelRatio : '';
                 screenSize += '' + width + " x " + height;
             }
 
@@ -196,32 +239,32 @@
             // system
             var os = unknown;
             var clientStrings = [
-                {s:'Windows 10', r:/(Windows 10.0|Windows NT 10.0)/},
-                {s:'Windows 8.1', r:/(Windows 8.1|Windows NT 6.3)/},
-                {s:'Windows 8', r:/(Windows 8|Windows NT 6.2)/},
-                {s:'Windows 7', r:/(Windows 7|Windows NT 6.1)/},
-                {s:'Windows Vista', r:/Windows NT 6.0/},
-                {s:'Windows Server 2003', r:/Windows NT 5.2/},
-                {s:'Windows XP', r:/(Windows NT 5.1|Windows XP)/},
-                {s:'Windows 2000', r:/(Windows NT 5.0|Windows 2000)/},
-                {s:'Windows ME', r:/(Win 9x 4.90|Windows ME)/},
-                {s:'Windows 98', r:/(Windows 98|Win98)/},
-                {s:'Windows 95', r:/(Windows 95|Win95|Windows_95)/},
-                {s:'Windows NT 4.0', r:/(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/},
-                {s:'Windows CE', r:/Windows CE/},
-                {s:'Windows 3.11', r:/Win16/},
-                {s:'Android', r:/Android/},
-                {s:'Open BSD', r:/OpenBSD/},
-                {s:'Sun OS', r:/SunOS/},
-                {s:'Linux', r:/(Linux|X11)/},
-                {s:'iOS', r:/(iPhone|iPad|iPod)/},
-                {s:'Mac OS X', r:/Mac OS X/},
-                {s:'Mac OS', r:/(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/},
-                {s:'QNX', r:/QNX/},
-                {s:'UNIX', r:/UNIX/},
-                {s:'BeOS', r:/BeOS/},
-                {s:'OS/2', r:/OS\/2/},
-                {s:'Search Bot', r:/(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/}
+                { s: 'Windows 10', r: /(Windows 10.0|Windows NT 10.0)/ },
+                { s: 'Windows 8.1', r: /(Windows 8.1|Windows NT 6.3)/ },
+                { s: 'Windows 8', r: /(Windows 8|Windows NT 6.2)/ },
+                { s: 'Windows 7', r: /(Windows 7|Windows NT 6.1)/ },
+                { s: 'Windows Vista', r: /Windows NT 6.0/ },
+                { s: 'Windows Server 2003', r: /Windows NT 5.2/ },
+                { s: 'Windows XP', r: /(Windows NT 5.1|Windows XP)/ },
+                { s: 'Windows 2000', r: /(Windows NT 5.0|Windows 2000)/ },
+                { s: 'Windows ME', r: /(Win 9x 4.90|Windows ME)/ },
+                { s: 'Windows 98', r: /(Windows 98|Win98)/ },
+                { s: 'Windows 95', r: /(Windows 95|Win95|Windows_95)/ },
+                { s: 'Windows NT 4.0', r: /(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/ },
+                { s: 'Windows CE', r: /Windows CE/ },
+                { s: 'Windows 3.11', r: /Win16/ },
+                { s: 'Android', r: /Android/ },
+                { s: 'Open BSD', r: /OpenBSD/ },
+                { s: 'Sun OS', r: /SunOS/ },
+                { s: 'Linux', r: /(Linux|X11)/ },
+                { s: 'iOS', r: /(iPhone|iPad|iPod)/ },
+                { s: 'Mac OS X', r: /Mac OS X/ },
+                { s: 'Mac OS', r: /(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/ },
+                { s: 'QNX', r: /QNX/ },
+                { s: 'UNIX', r: /UNIX/ },
+                { s: 'BeOS', r: /BeOS/ },
+                { s: 'OS/2', r: /OS\/2/ },
+                { s: 'Search Bot', r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/ }
             ];
             for (var id in clientStrings) {
                 var cs = clientStrings[id];
@@ -267,7 +310,7 @@
             }
         }
         setTimeout(collectData, 5000);
-        function collectData () {
+        function collectData() {
             window.jscd = {
                 screen: screenSize,
                 browser: browser,
@@ -289,7 +332,7 @@
 
     // The code below makes sure the information above is been pushed into a hidden textarea.
     setTimeout(bar, 6000);
-    function bar () {
+    function bar() {
         document.querySelector('#request_custom_fields_' + browserfield_id).value =
             'OS: ' + jscd.os + ' ' + jscd.osVersion + '\n' +
             'Browser: ' + jscd.browser + ' ' + jscd.browserMajorVersion +
