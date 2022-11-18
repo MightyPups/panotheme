@@ -483,8 +483,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Close alertbox
-if (window.location.href == "https://autobrawlchess.zendesk.com/hc/en-us"
-  || window.location.href == "https://autobrawlchess.zendesk.com/hc/en-us/requests/new") {
+if (document.getElementsByClassName('.ns-close')) {
   document.addEventListener('click', function (event) {
     if (event.target.matches('.ns-close')) {
       event.preventDefault()
