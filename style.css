@@ -5741,19 +5741,19 @@ li {
 }
 
 .regular {
-  background: #DD2F13;
+  background: linear-gradient(90deg, #EC9C00 23.61%, #FFC700 100%);
 }
 
 .info {
-	background: #62CF64;
+  background: linear-gradient(90deg, #2A9E01 21.77%, #24DD6E 100%);
 }
 
 .maintenance {
-  background: #D842DB;
+  background: linear-gradient(90deg, #AF1800 4.83%, #DD2F13 100%);
 }
 
 .delays {
-  background: #B3ABA9;
+  background: linear-gradient(90deg, #235FD5 0%, #5096FF 99.55%);
 }
 
 .ns-box a, .ns-box a {
