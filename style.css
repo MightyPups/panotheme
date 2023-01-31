@@ -5368,7 +5368,7 @@ html[dir="rtl"] .notification-left-aligned {
   font-style: italic;
   font-weight: 800;
   font-size: 32px;
-  line-height: 85%;
+  line-height: 100%;
   color: #14203F;
 }
 
@@ -5474,8 +5474,8 @@ html[dir="rtl"] .notification-left-aligned {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 120%;
-  /* or 19px */
+  line-height: 150%;
+  /* or 24px */
 
 
 	color: #14203F;
@@ -5741,19 +5741,19 @@ li {
 }
 
 .regular {
-  background: #DD2F13;
+  background: linear-gradient(90deg, #EC9C00 23.61%, #FFC700 100%);
 }
 
 .info {
-	background: #62CF64;
+  background: linear-gradient(90deg, #2A9E01 21.77%, #24DD6E 100%);
 }
 
 .maintenance {
-  background: #D842DB;
+  background: linear-gradient(90deg, #AF1800 4.83%, #DD2F13 100%);
 }
 
 .delays {
-  background: #B3ABA9;
+  background: linear-gradient(90deg, #235FD5 0%, #5096FF 99.55%);
 }
 
 .ns-box a, .ns-box a {
